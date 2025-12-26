@@ -1,0 +1,31 @@
+{
+  "name": "password-hash-battle",
+  "version": "1.0.0",
+  "description": "Benchmark + attack simulation: bcrypt vs argon2",
+  "main": "src/benchmark.js",
+  "type": "commonjs",
+  "scripts": {
+    "bench": "node src/benchmark.js",
+    "attack": "node src/attack-simulation.js",
+    "test:bcrypt": "node src/bcrypt.test.js",
+    "test:argon2": "node src/argon2.test.js",
+    "test": "npm run test:bcrypt && npm run test:argon2",
+    "run:all": "npm run bench && npm run attack",
+    "bench:all": "node src/benchmark.js --profile=all --runs=6",
+    "attack:hard": "node src/attack-simulation.js --profile=hardcore",
+    "report": "node src/report.js",
+    "report:no-bench": "node src/report.js --no-bench"
+  },
+  "keywords": [
+    "security",
+    "bcrypt",
+    "argon2",
+    "benchmark"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "argon2": "^0.31.2",
+    "bcrypt": "^5.1.1"
+  }
+}
