@@ -3,6 +3,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)
 ![Status](https://img.shields.io/badge/status-active-success)
+[![CI](https://github.com/Wellington-Barbosa/password-hash-battle/actions/workflows/ci.yml/badge.svg)](https://github.com/Wellington-Barbosa/password-hash-battle/actions/workflows/ci.yml)
 
 Projeto prático de benchmark para comparar **bcrypt** e **Argon2id** com foco em **performance**, **latência (p95)** e **custo computacional**, culminando na geração de um **relatório HTML5 interativo** com gráficos e explicações.
 
@@ -61,7 +62,7 @@ Conforme o hardware evolui, você não precisa trocar o algoritmo. Basta ajustar
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/password-hash-battle.git](https://github.com/seu-usuario/password-hash-battle.git)
+   git clone https://github.com/Wellington-Barbosa/password-hash-battle.git
    cd password-hash-battle
    ```
 
@@ -69,6 +70,16 @@ Conforme o hardware evolui, você não precisa trocar o algoritmo. Basta ajustar
    ```bash
    npm install
    ```
+
+---
+
+### Testes
+
+```bash
+npm test
+```
+
+Os testes conferem que cada algoritmo gera e verifica hashes corretamente. Rodam também a cada push, pelo GitHub Actions.
 
 ---
 
@@ -176,10 +187,10 @@ Nunca copie e cole cegamente. Teste no seu hardware de produção usando este pr
 - [x] Relatório HTML5 com Chart.js
 - [ ] Exportação para CSV
 - [ ] Gerar screenshot automático do relatório (Puppeteer/Playwright)
-- [ ] GitHub Actions para rodar testes automaticamente
+- [x] GitHub Actions para rodar testes automaticamente
 
 ---
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Sinta-se livre para usar, estudar e modificar.
+Este projeto está sob a licença MIT (veja o arquivo [LICENSE](LICENSE)). Sinta-se livre para usar, estudar e modificar.
